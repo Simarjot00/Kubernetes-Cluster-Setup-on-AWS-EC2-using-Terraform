@@ -17,25 +17,37 @@ Application of industry best practices for container orchestration on cloud plat
 
 My Implementation Steps
 
-1)Provisioned AWS EC2 Instances:
+1) Provisioned AWS EC2 Instances:
 Used Terraform scripts to create and configure the master and worker EC2 instances as the infrastructure foundation.
 
-2)Installed Kubernetes Components:
+Extracted k8s-master-Public-URL and k8s-node-Public-URL values from the end of the Terraform apply output for cluster access.
+
+2) Installed Kubernetes Components:
 Installed kubelet, kubeadm, and kubectl on all nodes to prepare them for cluster operations.
 
-3)Initialized Kubernetes Cluster:
-Ran kubeadm init on the master node to initialize the cluster and configured networking.
+3) Initialized Kubernetes Cluster:
+Ran the following command on the master node to initialize the Kubernetes cluster and configure networking:
 
-4)Joined Worker Nodes:
+bash
+Copy
+Edit
+sudo kubeadm init --config kube-config.yml --ignore-preflight-errors=all
+
+4) Joined Worker Nodes:
 Executed the join commands on worker nodes to add them to the Kubernetes cluster.
 
-5)Deployed Containerized Workloads:
+5) Deployed Containerized Workloads:
 Deployed sample applications and workloads to the cluster using Kubernetes manifests.
 
-6)Managed and Verified Cluster:
-Used kubectl get nodes and kubectl get services to monitor cluster status and service availability.
+6) Managed and Verified Cluster:
+Used the following commands on the master node to monitor cluster status and services:
 
-7)Tested Application Accessibility:
-Verified the deployment by accessing application endpoints on both master and worker public IPs via a web browser.
+bash
+Copy
+Edit
+kubectl get nodes
+kubectl get services
 
+7) Tested Application Accessibility:
+Verified the deployment by accessing application endpoints on both master and worker public IPs via a web browser on port 1233.
 
