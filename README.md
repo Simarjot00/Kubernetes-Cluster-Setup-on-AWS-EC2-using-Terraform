@@ -16,6 +16,7 @@ Verification of cluster and application accessibility via CLI and web browser in
 Application of industry best practices for container orchestration on cloud platforms
 
 My Implementation Steps
+
 1)Provisioned AWS EC2 Instances:
 Used Terraform scripts to create and configure the master and worker EC2 instances as the infrastructure foundation.
 
