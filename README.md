@@ -1,4 +1,7 @@
 # Kubernetes-Cluster-Setup-on-AWS-EC2-using-Terraform
+
+Link for the source code: https://drive.google.com/file/d/1VJBhRN4tlct0fOMn7hX19fZz-zkDW7mg/view?usp=drive_link
+
 In this lab, I created a Kubernetes cluster on AWS EC2 with Terraform. I set up EC2 instances, installed Kubernetes tools, initialized the cluster, added worker nodes, and deployed workloads. I managed the cluster via command line and verified access through a web browser
 
 Key highlights:
