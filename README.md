@@ -16,25 +16,25 @@ Verification of cluster and application accessibility via CLI and web browser in
 Application of industry best practices for container orchestration on cloud platforms
 
 My Implementation Steps
-Provisioned AWS EC2 Instances:
+1)Provisioned AWS EC2 Instances:
 Used Terraform scripts to create and configure the master and worker EC2 instances as the infrastructure foundation.
 
-Installed Kubernetes Components:
+2)Installed Kubernetes Components:
 Installed kubelet, kubeadm, and kubectl on all nodes to prepare them for cluster operations.
 
-Initialized Kubernetes Cluster:
+3)Initialized Kubernetes Cluster:
 Ran kubeadm init on the master node to initialize the cluster and configured networking.
 
-Joined Worker Nodes:
+4)Joined Worker Nodes:
 Executed the join commands on worker nodes to add them to the Kubernetes cluster.
 
-Deployed Containerized Workloads:
+5)Deployed Containerized Workloads:
 Deployed sample applications and workloads to the cluster using Kubernetes manifests.
 
-Managed and Verified Cluster:
+6)Managed and Verified Cluster:
 Used kubectl get nodes and kubectl get services to monitor cluster status and service availability.
 
-Tested Application Accessibility:
+7)Tested Application Accessibility:
 Verified the deployment by accessing application endpoints on both master and worker public IPs via a web browser.
 
 
